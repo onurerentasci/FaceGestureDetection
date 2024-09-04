@@ -53,5 +53,43 @@ class FaceMeshDetector:
 
         return smile_ratio
 
+    def calculate_eyebrow_movement(self, face):
+        # Sağ kaş noktaları
+        right_eyebrow = [face[70], face[63], face[105]]
+        right_eye_top = face[159]  # Sağ gözün üst noktası
+
+        # Sol kaş noktaları
+        left_eyebrow = [face[336], face[296], face[334]]
+        left_eye_top = face[386]  # Sol gözün üst noktası
+
+        # Sağ kaş hareketi (sağ kaşın ortalama pozisyonu ile sağ gözün üst noktası arasındaki mesafe)
+        right_eyebrow_movement = self.calculate_average_distance(right_eyebrow, right_eye_top)
+
+        # Sol kaş hareketi (sol kaşın ortalama pozisyonu ile sol gözün üst noktası arasındaki mesafe)
+        left_eyebrow_movement = self.calculate_average_distance(left_eyebrow, left_eye_top)
+
+        return left_eyebrow_movement, right_eyebrow_movement
+
+    def calculate_average_distance(self, points, reference_point):
+        distances = [self.calculate_distance(point, reference_point) for point in points]
+        return sum(distances) / len(distances)
+
+    def calculate_cheek_movement(self, face):
+        # Sağ yanak noktaları
+        right_cheek_points = [face[50], face[101], face[205]]
+        right_nose_point = face[1]  # Sağ yanaktaki referans burun noktası
+
+        # Sol yanak noktaları
+        left_cheek_points = [face[280], face[330], face[425]]
+        left_nose_point = face[1]  # Sol yanaktaki referans burun noktası
+
+        # Sağ yanak hareketi (sağ yanaktaki noktaların buruna olan ortalama mesafesi)
+        right_cheek_movement = self.calculate_average_distance(right_cheek_points, right_nose_point)
+
+        # Sol yanak hareketi (sol yanaktaki noktaların buruna olan ortalama mesafesi)
+        left_cheek_movement = self.calculate_average_distance(left_cheek_points, left_nose_point)
+
+        return left_cheek_movement, right_cheek_movement
+
     def calculate_distance(self, point1, point2):
         return math.sqrt((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2)

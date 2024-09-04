@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0289cdcb-0071-406b-b9b1-619273cf9ce9" name="Changes" comment="Added mashed face and fps feature">
+    <list default="true" id="0289cdcb-0071-406b-b9b1-619273cf9ce9" name="Changes" comment="Blink and smile ratio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/face_mesh_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/face_mesh_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fps_counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/fps_counter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724955986884</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Blink and smile ratio">
+      <option name="closed" value="true" />
+      <created>1725393765502</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725393765502</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +206,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added mashed face and fps feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mashed face and fps feature" />
+    <MESSAGE value="Blink and smile ratio" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blink and smile ratio" />
   </component>
 </project>
